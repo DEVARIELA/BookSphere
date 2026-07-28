@@ -16,11 +16,8 @@ async function harryService(message, user_id){
     // GET USER BOOKS
 
     const {data: books, error} = await supabase
-
     .from("books")
-
     .select("*")
-
     .eq("user_id", user_id);
 
 
@@ -155,8 +152,16 @@ async function harryService(message, user_id){
 
         books.forEach(book=>{
 
-            genres[book.genre] =
-            (genres[book.genre] || 0) + 1;
+            if(book.genre){
+
+                const genre =
+                book.genre.trim().toLowerCase();
+
+
+                genres[genre] =
+                (genres[genre] || 0) + 1;
+
+            }
 
         });
 
@@ -228,8 +233,16 @@ async function harryService(message, user_id){
 
         books.forEach(book=>{
 
-            genres[book.genre] =
-            (genres[book.genre] || 0) + 1;
+            if(book.genre){
+
+                const genre =
+                book.genre.trim().toLowerCase();
+
+
+                genres[genre] =
+                (genres[genre] || 0) + 1;
+
+            }
 
         });
 
@@ -320,13 +333,38 @@ async function harryService(message, user_id){
     ){
 
 
+        if(books.length === 0){
+
+            return `
+            
+            📚 Your library is empty.
+
+            <br><br>
+
+            Add books first and Harry will recommend something 🤖
+
+            `;
+
+        }
+
+
+
         const genres = {};
+
 
 
         books.forEach(book=>{
 
-            genres[book.genre] =
-            (genres[book.genre] || 0) + 1;
+            if(book.genre){
+
+                const genre =
+                book.genre.trim().toLowerCase();
+
+
+                genres[genre] =
+                (genres[genre] || 0) + 1;
+
+            }
 
         });
 
@@ -336,29 +374,62 @@ async function harryService(message, user_id){
 
         .sort(
             (a,b)=>genres[b]-genres[a]
-        )[0]?.trim();
+        )[0];
+
 
 
 
         const recommendations = {
 
-            Horror:[
-                "It",
-                "The Shining",
-                "Dracula"
+
+            horror:[
+                "It - Stephen King",
+                "The Shining - Stephen King",
+                "Dracula - Bram Stoker"
             ],
 
-            Fantasy:[
-                "The Hobbit",
-                "Harry Potter",
-                "The Lord of the Rings"
+
+            fantasy:[
+                "The Hobbit - J.R.R. Tolkien",
+                "Harry Potter - J.K. Rowling",
+                "The Lord of the Rings - J.R.R. Tolkien"
             ],
 
-            Fiction:[
-                "1984",
-                "The Alchemist",
-                "The Little Prince"
+
+            fiction:[
+                "1984 - George Orwell",
+                "The Alchemist - Paulo Coelho",
+                "The Little Prince - Antoine de Saint-Exupéry"
+            ],
+
+
+            romance:[
+                "Pride and Prejudice - Jane Austen",
+                "The Notebook - Nicholas Sparks",
+                "Jane Eyre - Charlotte Brontë"
+            ],
+
+
+            mystery:[
+                "Sherlock Holmes - Arthur Conan Doyle",
+                "Gone Girl - Gillian Flynn",
+                "The Da Vinci Code - Dan Brown"
+            ],
+
+
+            thriller:[
+                "The Silent Patient - Alex Michaelides",
+                "The Girl on the Train - Paula Hawkins",
+                "Verity - Colleen Hoover"
+            ],
+
+
+            scifi:[
+                "Dune - Frank Herbert",
+                "The Martian - Andy Weir",
+                "Foundation - Isaac Asimov"
             ]
+
 
         };
 
@@ -378,23 +449,40 @@ async function harryService(message, user_id){
 
             <br><br>
 
-            🎭 You enjoy ${favoriteGenre} books.
+            🎭 Your favorite genre:
+            ${favoriteGenre}
 
             <br><br>
 
-            Harry recommends:
+            🤖 Harry recommends:
 
-            <br>
+            <br><br>
 
             📚 ${suggested.join("<br>📚 ")}
 
             `;
 
+
         }
 
 
 
-        return "✨ Harry recommends exploring more books.";
+        return `
+
+        ✨ Harry recommends exploring more books.
+
+        <br><br>
+
+        I noticed you enjoy:
+
+        🎭 ${favoriteGenre || "different genres"}
+
+        <br><br>
+
+        Add more books and Harry will personalize recommendations better 🤖📚
+
+        `;
+
 
     }
 
@@ -402,7 +490,9 @@ async function harryService(message, user_id){
 
 
 
+    // ==========================
     // DEFAULT
+    // ==========================
 
 
     return `
