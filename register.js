@@ -16,7 +16,7 @@ registerForm.addEventListener("submit", async (e) => {
     try {
 
 
-        const response = await fetch(
+      const response = await fetch(
     "https://booksphere-m7ex.onrender.com/api/auth/register",
     {
         method: "POST",
@@ -24,6 +24,7 @@ registerForm.addEventListener("submit", async (e) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
+            name,
             email,
             password
         })
