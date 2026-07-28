@@ -19,22 +19,23 @@ loginForm.addEventListener("submit", async (e)=>{
 
 
     try{
-
+try {
 
     const response = await fetch(
-    "https://booksphere-m7ex.onrender.com/api/auth/login",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            email,
-            password
-        })
-    }
-);
+        "https://booksphere-m7ex.onrender.com/api/auth/login",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        }
+    );
 
+    const data = await response.json();
 
 
         const data = await response.json();
