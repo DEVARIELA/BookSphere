@@ -2,8 +2,7 @@
 // Dashboard JavaScript
 
 
-const API_URL = "http://localhost:5000/api";
-
+const API_URL = "https://booksphere-m7ex.onrender.com/api";
 
 // Merr user nga localStorage
 
