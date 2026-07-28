@@ -149,6 +149,22 @@ BookSphere/
 * Integrate AI-powered assistance into a library system
 
 ---
+## 🔐 Test Accounts
+
+### User Account
+Email:
+testuser@booksphere.com
+
+Password:
+Test123!
+
+
+### Admin Account
+Email:
+admin@booksphere.com
+
+Password:
+Admin123!
 
 # 👩‍💻 Author
 
