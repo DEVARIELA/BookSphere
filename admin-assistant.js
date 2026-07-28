@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const response = await fetch(
-                "http://localhost:5000/api/admin-assistant",
+                "https://booksphere-m7ex.onrender.com/api/assistant",
                 {
 
                     method:"POST",
