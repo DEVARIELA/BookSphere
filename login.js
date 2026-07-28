@@ -19,7 +19,6 @@ loginForm.addEventListener("submit", async (e)=>{
 
 
     try{
-try {
 
     const response = await fetch(
         "https://booksphere-m7ex.onrender.com/api/auth/login",
@@ -38,7 +37,7 @@ try {
     const data = await response.json();
 
 
-        const data = await response.json();
+    
 
 
 
