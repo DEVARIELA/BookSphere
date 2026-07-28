@@ -16,7 +16,7 @@ async function askHarry(message) {
 
 
         const response = await fetch(
-            "http://localhost:5000/api/assistant",
+            "https://booksphere-m7ex.onrender.com/api/assistant",
             {
 
                 method: "POST",
