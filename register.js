@@ -17,7 +17,7 @@ registerForm.addEventListener("submit", async (e) => {
 
 
         const response = await fetch(
-    "https://booksphere-m7ex.onrender.com/api/auth/login",
+    "https://booksphere-m7ex.onrender.com/api/auth/register",
     {
         method: "POST",
         headers: {
