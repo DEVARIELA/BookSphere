@@ -225,15 +225,17 @@ async function loadBooks(){
 
 async function loadUsers(){
 
-
-    try{
-
-
-        const response =
-        await fetch(
-            `${API_URL}/auth/users`
-        );
-
+try{
+   const response =
+await fetch(
+    `${API_URL}/auth/users`,
+    {
+        headers:{
+            "Authorization":
+            `Bearer ${localStorage.getItem("token")}`
+        }
+    }
+);
 
 
         const users =
