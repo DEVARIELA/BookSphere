@@ -428,8 +428,12 @@ async function harryService(message, user_id){
                 "Dune - Frank Herbert",
                 "The Martian - Andy Weir",
                 "Foundation - Isaac Asimov"
-            ]
-
+            ],
+selfhelp:[
+    "Atomic Habits - James Clear",
+    "The 7 Habits of Highly Effective People - Stephen Covey",
+    "How to Win Friends and Influence People - Dale Carnegie"
+],
 
         };
 
