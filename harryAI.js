@@ -1,8 +1,6 @@
 // ==========================
 // HARRY AI ASSISTANT
 // ==========================
-
-
 async function askHarry(message) {
 
     try {
