@@ -2,68 +2,88 @@
 
 ## Overview
 
-BookSphere is a modern web-based Library Management System designed to help users organize their personal book collections, monitor reading progress, and manage their libraries efficiently. The application combines a clean user interface with AI-assisted features to provide a smarter reading experience.
+BookSphere is a modern full-stack web-based Library Management System designed to help users organize their personal book collections, track reading progress, and manage their libraries efficiently.
+
+The application provides user and admin functionalities with an integrated AI assistant named **Harry**, which helps users analyze their library, view statistics, and receive personalized reading recommendations.
 
 This project was developed as part of an internship technical assignment.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### User Features
+## 👤 User Features
 
 * User Registration and Login
-* Secure Authentication
+* User Authentication
 * Add, Edit, and Delete Books
 * Search Books
-* Filter by Genre
-* Filter by Reading Status
+* Filter Books by Genre
+* Filter Books by Reading Status
 * Personal Library Dashboard
 * Track Reading Progress
+* AI Assistant – Harry 🤖
 
-### Admin Features
+---
+
+## 👑 Admin Features
 
 * Admin Dashboard
-* View All Users
+* View All Registered Users
 * View All Books
 * Add Books
 * Edit Books
 * Delete Books
 * Library Statistics
-
-### AI Assistant – Harry 🤖
-
-Harry is the built-in AI assistant that helps users navigate the platform by answering common questions about BookSphere, including:
-
-* What BookSphere is
-* How to register
-* How to log in
-* General platform guidance
+* Admin AI Assistant – Harry 🤖
 
 ---
 
-## 🛠 Technologies Used
+# 🤖 AI Assistant – Harry
 
-### Frontend
+Harry is the built-in AI assistant integrated into BookSphere.
 
-* HTML
-* CSS
+Harry helps users and admins by providing:
+
+### User Assistant:
+
+* Library Summary
+* Reading Statistics
+* Favorite Genre Analysis
+* Library Insights
+* Personalized Book Recommendations
+* General platform guidance
+
+### Admin Assistant:
+
+* Total users information
+* Total books information
+* System statistics
+* Most active readers analysis
+
+---
+
+# 🛠 Technologies Used
+
+## Frontend
+
+* HTML5
+* CSS3
 * JavaScript
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
 
-### Database
+## Database
 
 * Supabase
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
-```text
 BookSphere/
 │
 ├── root/
@@ -76,7 +96,6 @@ BookSphere/
 │   ├── add-admin-book.js
 │   ├── add-book.html
 │   ├── add-book.js
-│   ├── admin-dashboard.html
 │   ├── admin-dashboard.js
 │   ├── dashboard.js
 │   ├── bookspherelogo.png
@@ -91,17 +110,16 @@ BookSphere/
 │   ├── edit-book.js
 │   ├── login.js
 │   ├── register.js
-│   └── 
 │
 ├── backend/
 │   ├── server.js
-│   ├── supabase.js  
+│   ├── supabase.js
 │   ├── testsupabase.js
 │   ├── package.json
 │   ├── package-lock.json
 │   ├── .env
-│   ├── controlers/
-│   ├── adminAssistanController.js
+│   ├── controllers/
+│   ├── adminAssistantController.js
 │   ├── assistantController.js
 │   ├── authController.js
 │   ├── bookController.js
@@ -116,36 +134,49 @@ BookSphere/
 │   ├── adminHarryService.js
 │   ├── harryService.js
 │   ├── node_modules/
-│   ├── all downloaded
-│   └── 
 │
 └── README.md
-```
 
 ---
 
-
-
-
-## 🎯 Project Goals
+# 🎯 Project Goals
 
 * Build a complete full-stack web application
 * Practice REST API development
 * Work with a relational database
 * Implement authentication and authorization
-* Develop an intuitive user experience
-* Integrate an AI-powered assistant
+* Create an intuitive user experience
+* Integrate AI-powered assistance into a library system
 
 ---
+## 🔐 Test Accounts
 
-## 👩‍💻 Author
+### User Account
+Email:
+testuser@booksphere.com
+
+Password:
+Test123!
+
+
+### Admin Account
+Email:
+admin@booksphere.com
+
+Password:
+Admin123!
+
+# 👩‍💻 Author
 
 **Arjela Bezati**
 
-GitHub: https://github.com/DEVARIELA
+GitHub:
+https://github.com/DEVARIELA
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project was created for educational purposes as part of an internship technical assignment.
+
+
